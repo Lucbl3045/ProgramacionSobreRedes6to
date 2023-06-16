@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/Action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:text="Suma"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Divided_Button"
+        app:layout_constraintEnd_toStartOf="@+id/Divided_Button" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Calculadora"
+        app:layout_constraintBottom_toTopOf="@+id/Value1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Value1"
+        android:layout_width="217dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="142dp"
+        android:ems="10"
+        android:hint="nro1"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Value2"
+        android:layout_width="211dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="71dp"
+        android:ems="10"
+        android:hint="nro 2 "
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/Value1"
+        app:layout_constraintTop_toBottomOf="@+id/Value1" />
+
+    <TextView
+        android:id="@+id/sumValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="142dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Value1" />
+
+    <Button
+        android:id="@+id/Minus_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="63dp"
+        android:text="Resta"
+        app:layout_constraintBottom_toTopOf="@+id/Changer_Button"
+        app:layout_constraintStart_toStartOf="@+id/Action_button" />
+
+    <Button
+        android:id="@+id/Divided_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:text="Division"
+        app:layout_constraintBottom_toTopOf="@+id/Mutliplied_Button"
+        app:layout_constraintStart_toStartOf="@+id/Mutliplied_Button" />
+
+    <Button
+        android:id="@+id/Changer_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="Change Activity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Mutliplied_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="68dp"
+        android:text="Multiplicacion"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Minus_Button"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
