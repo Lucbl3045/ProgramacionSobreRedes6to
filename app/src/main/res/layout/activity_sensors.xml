@@ -10,34 +10,18 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="130dp"
+        android:layout_marginBottom="96dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/Listadodesen"
-        app:layout_constraintStart_toStartOf="@+id/Listadodesen"
-        app:layout_constraintTop_toBottomOf="@+id/Listadodesen" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/Listadodesen"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="138dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="179dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Sensorval" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/Sensorval"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="138dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/Listadodesen"
         app:layout_constraintEnd_toEndOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -45,12 +29,12 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="247dp"
-        android:layout_marginBottom="465dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="235dp"
+        android:layout_marginBottom="20dp"
         android:text="Aca se esta haciendo un Recyclerview, falta ingresar los sensores."
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/Listadodesen"
+        app:layout_constraintBottom_toTopOf="@+id/_dynamic"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.764" />
 
@@ -86,4 +70,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/sensroval2"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listsensor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="159dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 </androidx.constraintlayout.widget.ConstraintLayout>

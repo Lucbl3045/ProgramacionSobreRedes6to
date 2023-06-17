@@ -12,7 +12,9 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -20,33 +22,30 @@ import java.util.List;
 public class Sensors extends AppCompatActivity implements SensorEventListener {
     private SensorManager sensorManager;
     private Button Changer;
-    private RecyclerView list;
+    private ListView list;
     private Sensor mSensor;
     private TextView Sensorval;
     private TextView Sensorval2;
     private TextView Sensorval3;
+    //private List<Sensor> Sensors
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sensors);
         Changer = (Button) findViewById(R.id.button);
-        list = (RecyclerView) findViewById(R.id.Listadodesen);
+        list = (ListView) findViewById(R.id.listsensor);
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         Sensorval = (TextView) findViewById(R.id.Sensorval);
         Sensorval2= (TextView) findViewById(R.id.sensroval2);
         Sensorval3 = (TextView) findViewById(R.id.Sensorval3);
         List<Sensor> deviceSensors = sensorManager.getSensorList(Sensor.TYPE_ALL);
         //float sensorVal = sensorManager.getDefaultSensor()
+        list.setAdapter(new ArrayAdapter<Sensor>(this, android.R.layout.simple_list_item_1, deviceSensors));
         if (sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER) != null){
             mSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
             sensorManager.registerListener(this, mSensor, SensorManager.SENSOR_DELAY_NORMAL);
         }
-        for (Integer i= 0;i<deviceSensors.size();i++){
-
-
-        }
-
         //boolean accelerometer;
 
         //accelerometer = sensorMgr.registerListener(this,sensorMgr.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
